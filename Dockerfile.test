@@ -4,4 +4,5 @@ WORKDIR /app
 COPY package-lock.json .
 COPY package.json .
 RUN npm i && npm i -g @angular/cli
+RUN apt-get update && apt-get install -y chromium
 COPY . .
